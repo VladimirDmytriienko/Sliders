@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl</title>
+    <style>
+        img {
+            width: 50%;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link href="./css/lightbox.min.css" rel="stylesheet" />
+   
+</head>
+<body>
+    
+     
+            <!-- OWL+LIGHTBOX -->
+
+    <div class="owl-carousel owl-theme">
+        <a href="./img/page3/aleksandra-zelena-3KGscaEJ94o-unsplash.jpg" data-lightbox="roadtrip"><img src="./img/page3/aleksandra-zelena-3KGscaEJ94o-unsplash.jpg" alt=""></a>
+        <a href="./img/page3/faith-crabtree-rLHJgH_h75o-unsplash.jpg" data-lightbox="roadtrip"><img src="./img/page3/faith-crabtree-rLHJgH_h75o-unsplash.jpg" alt=""></a>
+        <a href="./img/page3/priscilla-fraire-_1LvAexVWa8-unsplash.jpg"><img src="./img/page3/priscilla-fraire-_1LvAexVWa8-unsplash.jpg" alt=""></a>
+        <a href="./img/page3/zeynep-elif-ozdemir-45VQGFj98zE-unsplash.jpg" data-lightbox="roadtrip"><img src="./img/page3/zeynep-elif-ozdemir-45VQGFj98zE-unsplash.jpg" alt=""></a>
+        <a href="./img/page3/hans-reniers-DELDTYAjPrg-unsplash.jpg" data-lightbox="roadtrip"><img src="./img/page3/hans-reniers-DELDTYAjPrg-unsplash.jpg" alt=""></a>
+  
+        
+        
+    </div>
+    
+
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+
+    
+    <script>
+        var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items:1,
+                lazyLoad: true,
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true,
+                nav: true,
+                dots: true, 
+               
+            });
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[1000])
+            })
+            $('.stop').on('click',function(){
+                owl.trigger('stop.owl.autoplay')
+            })
+    </script>
+</body>
+</html>
